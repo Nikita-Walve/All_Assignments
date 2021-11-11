@@ -1,24 +1,25 @@
 import java.util.Scanner;
-public class Pattern {
+
+public class Pattern
+{
+	static void pattern(String string)
+	{
+		for (int i = 0; i < string.length(); i++)
+		{
+			for (int j = 0; j <= i; j++)
+			{
+				System.out.print(string.charAt(j));
+			}
+			System.out.println();
+		}
+	}
 
 	public static void main(String args[])
 	{
-	String s;
-	int i,j;
-	System.out.println("enter string");
-	Scanner sc=new Scanner(System.in);
-	s=sc.nextLine();
-	int n=s.length();
-	for(i=0;i<n;i++)
-	{
-	for(j=0;j<=i;j++)
-	{
-	System.out.print(s.charAt(j));
+		String string;
+		System.out.println("Enter string");
+		Scanner sc = new Scanner(System.in);
+		string = sc.nextLine();
+		pattern(string);
 	}
-	System.out.println();
-	}
-	}
-	}
-
-
-
+}
